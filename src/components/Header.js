@@ -5,6 +5,7 @@ function Header(){
         <div>
             
             <div className="header">
+                <Link to="/">HOME</Link>
                 <span className="mt-3">
                     SELL & PURCHASE ONLINE ... In your City
                 </span>
