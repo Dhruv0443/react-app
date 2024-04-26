@@ -10,19 +10,53 @@ import {
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import AddProduct from './components/AddProduct';
+import LikedProducts from './components/LikedProducts';
+import ProductDetail from './components/ProductDetail';
+import CategoryPage from './components/CategoryPage';
+import MyProducts from './components/MyProducts';
+import MyProfile from './components/MyProfile';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (<Home/>),
+    element: (<Home />),
+  },
+  {
+    path: "/category/:catName",
+    element: (<CategoryPage />),
+  },
+  {
+    path: "about",
+    element: <div>About</div>,
   },
   {
     path: "/login",
-    element: (<Login/>),
+    element: (<Login />),
   },
   {
     path: "/signup",
-    element: (<Signup/>),
+    element: (<Signup />),
+  },
+  {
+    path: "/add-product",
+    element: (<AddProduct />),
+  },
+  {
+    path: "/liked-products",
+    element: (<LikedProducts />),
+  },
+  {
+    path: "/my-products",
+    element: (<MyProducts />),
+  },
+  {
+    path: "/product/:productId",
+    element: (<ProductDetail />),
+  },
+  {
+    path: "/my-profile",
+    element: (<MyProfile />),
   },
 ]);
 
