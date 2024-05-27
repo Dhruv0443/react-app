@@ -41,17 +41,28 @@ function ProductDetail() {
 
     return (<>
         <Header />
-        PRODUCT DETAILS :
         <div >
             {product && <div className="d-flex justify-content-between flex-wrap">
-                <div>
-                    <img width="400px" height="200px" src={API_URL + '/' + product.pimage} alt="" />
-                    {product.pimage2 && <img width="400px" height="200px" src={API_URL + '/' + product.pimage2} alt="" />}
-                    <h6> Product Details : </h6>
-                    {product.pdesc}
-                </div>
-                <div>
+                <div style={{Width:'10%'}}></div>
+                <table align="center">
+                <tr>
+                    <th><h4> Product Details : </h4>
+                    {product.pdesc}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img width="400px" height="200px" src={API_URL + '/' + product.pimage} alt="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {product.pimage2 && <img width="400px" height="200px" src={API_URL + '/' + product.pimage2} alt="" />}
+                    </td>
+                </tr>
+                <tr>
+                <center>
                     <h3 className="m-2 price-text"> Rs. {product.price} /- </h3>
+                </center>
                     <p className="m-2"> {product.pname}  | {product.category} </p>
                     <p className="m-2 text-success"> {product.pdesc} </p>
 
@@ -63,6 +74,17 @@ function ProductDetail() {
                     {user && user.mobile && <h3>{user.mobile}</h3>}
                     {user && user.email && <h6>{user.email}</h6>}
 
+                </tr>
+                    
+
+                </table>
+                    
+                    
+                    
+                
+                <div>
+                    
+                    
                 </div>
             </div>}
         </div>
