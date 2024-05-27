@@ -26,6 +26,14 @@ function Header(props) {
             "latitude": 19.0760,
             "longitude": 72.8777,
             "placeName": "Mumbai, Maharashtra"
+        },{
+            "latitude": 30.378180,
+            "longitude": 76.776695,
+            "placeName": "Ambala, Haryana"
+        },{
+            "latitude": 30.483997,
+            "longitude": 76.593948,
+            "placeName": "Rajpura, Punjab"
         },
     ]
 
@@ -79,7 +87,7 @@ function Header(props) {
                         color: '#fff',
                         fontSize: '14px',
                         borderRadius: '50%'
-                    }} >  <img src={'../logo.svg'}></img></div>
+                    }} >  <img src={require('../logo.png')} style={{height:"100%", width:"100%"}}></img></div>
 
                 {showOver && <div style={{
                     minHeight: '100px',
@@ -116,7 +124,7 @@ function Header(props) {
                     </div>
                     <div>
                         {!localStorage.getItem('token') ?
-                            <Link to="/login" style={{textDecoration:'none',color:'white'}}>  <br/>&emsp;LOGIN </Link> :
+                            <Link to="/login" style={{textDecoration:'none',color:'white', textAlign:"center",}}>  <br/>&emsp;LOGIN </Link> :
                             <button className='logout-btn' onClick={handleLogout}> LOGOUT </button>}
                     </div>
 
